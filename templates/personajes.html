@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block titulo %} Characters {% endblock %}
+{% block barra %}
+    <nav class="barra-navegacion">
+        <div class="contenedor-nav">
+            <div class="marca-nav">
+                <h1>STAR WARS</h1>
+            </div>
+            <ul class="menu-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/peliculas">Movies</a></li>
+                <li><a href="/planetas">Planets</a></li>
+                <li><a href="/starships">Starphips</a></li>
+                <li><a href="/especies">Species</a></li>
+            </ul>
+        </div>
+    </nav>
+{%endblock%}
+
+{% block main %}
+    <section class="barra-lateral">
+        <div class="sidebar-header">
+            <h2 class="valor_seleccionado">Characters</h2>
+            <div class="sidebar-divider"></div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="character-list">
+                {% for i in datos %}
+                <li class="character-item">
+                    <a class="character-link">
+                        <div class="character-avatar">{{ i[0] }}</div>
+                        <span class="character-name">{{ i }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </section>
+    
+    <section class="centro">
+        <section class="seccion-busqueda">
+            <div class="search-container">
+                <h2 class="titulo-busqueda">Search Characters</h2>
+                <p class="search-subtitle">Discover detailed information about your favorite Star Wars movies.</p>
+                
+                <div class="buscador-principal">
+                    <form id="formulario-personaje" class="search-form">
+                        <div class="input-wrapper">
+                            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>  
+                            <input type="text" placeholder="Write the character namen..." class="entrada-principal">
+                            <div class="loading-spinner" id="loading-spinner"></div>
+                        </div>
+                        <button type="submit" class="boton-principal">
+                            <span class="button-text">Search</span>
+                            <svg class="button-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="seccion-perfil">
+            <div class="contenedor-perfil">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar" id="profile-avatar">
+                                <div class="avatar-placeholder">?</div>
+                            </div>
+                        </div>
+                        <div class="profile-title-section">
+                            <h3 class="profile-name" id="profile-name">Select a Character</h3>
+                            <p class="profile-subtitle" id="profile-subtitle">Character information will appear here</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-content" id="profile-content">
+                        <div class="empty-state" id="empty-state">
+                            <div class="empty-icon">
+                                ?
+                            </div>
+                            <h4 class="no_encontrado">No Character selected</h4>
+                            <p class="borrado">Search for a Character or select one from the list to see their detailed information.</p>
+                        </div>
+                        <div class="info-grid" style="display: none;">
+                            <div class="info-card">
+                                <div class="info-header">
+                                    <svg class="info-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span class="info-label">information</span>
+                                </div>
+                                <div class="info-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+{% endblock %}

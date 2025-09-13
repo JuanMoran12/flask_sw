@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo Star Wars</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-nav">
+            <div class="marca-nav">
+                <h1>STAR WARS</h1>
+            </div>
+            <ul class="menu-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/personajes">Characters</a></li>
+                <li><a href="/peliculas">Movies</a></li>
+                <li><a href="/planetas">Planets</a></li>
+                <li><a href="/starships">Starphips</a></li>
+                <li><a href="/especies">Species</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="heroe">
+        <div class="contenedor-heroe">
+            <div class="contenido-heroe">
+                <h1>Explore the Star Wars Universe</h1>
+                <p>Discover iconics characters, epic movies, legendary starships, several planetas and awesome species of a galaxy so far away.</p>
+                <div class="placeholder-imagen-heroe">
+                    <section class="galeria">
+                        <div class="contenedor-galeria">
+                            <div class="item-galeria">
+                                <img class="imagen" src="{{ url_for('static', filename='images/descarga.jpg') }}" alt="Ana">
+                                <div class="texto-imagen">Movies</div>
+                            </div>
+                            <div class="item-galeria">
+                                <img class="imagen" src="{{ url_for('static', filename='images/death.jpg') }}" alt="C3PO">
+                                <div class="texto-imagen">Starships</div>
+                            </div>
+                            <div class="item-galeria">
+                                <img class="imagen" src="{{ url_for('static', filename='images/yoda.jpg') }}" alt="Yoda">
+                                <div class="texto-imagen">Species</div>
+                            </div>
+                            <div class="item-galeria">
+                                <img class="imagen" src="{{ url_for('static', filename='images/planets2.jpg') }}" alt="Planeta">
+                                <div class="texto-imagen">Planets</div>
+                            </div>
+                            <div class="item-galeria">
+                                <img class="imagen" src="{{ url_for('static', filename='images/vader.webp') }}" alt="Darth Vader">
+                                <div class="texto-imagen">Characters</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="caracteristicas">
+        <div class="contenedor">
+            <div class="cuadricula-caracteristicas">
+                <div class="tarjeta-caracteristica sable-blanco">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Universe</h3>
+                    <p>Vast, fictional galaxy filled with diverse planets, species, and cultures, serving as the setting for the popular Star Wars franchise.</p>
+                    <a href="#cronologia" class="enlace-tarjeta">About the Star Wars Universe →</a>
+                </div>
+                <div class="tarjeta-caracteristica sable-azul">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Characters</h3>
+                    <p>Iconic heroes and villains from the Star Wars universe, including Jedi, Sith, rebels, and droids who shaped galactic history.</p>
+                    <a href="#personajes" class="enlace-tarjeta">Explore Characters →</a>
+                </div>
+
+                <div class="tarjeta-caracteristica sable-verde">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Movies</h3>
+                    <p>Epic space opera films spanning three trilogies, chronicling the rise and fall of the Galactic Empire and the Jedi Order.</p>
+                    <a href="#peliculas" class="enlace-tarjeta">Explore Movies →</a>
+                </div>
+
+                <div class="tarjeta-caracteristica sable-rojo">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Starphips</h3>
+                    <p>Legendary ships from fighters to capital ships, including X-wings, Star Destroyers, and the iconic Millennium Falcon.</p>
+                    <a href="#naves" class="enlace-tarjeta">Explore Starphips →</a>
+                </div>
+
+                <div class="tarjeta-caracteristica sable-purpura">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Planets</h3>
+                    <p>Diverse worlds across the galaxy, from desert planets like Tatooine to forest moons like Endor and city planets like Coruscant.</p>
+                    <a href="#planetas" class="enlace-tarjeta">Explore Planets →</a>
+                </div>
+
+                <div class="tarjeta-caracteristica sable-amarillo">
+                    <div class="icono-tarjeta">
+                    </div>
+                    <h3>Species</h3>
+                    <p>Fascinating alien races and beings populate the Star Wars galaxy, from Wookiees and Ewoks to Twi'leks and Hutts.</p>
+                    <a href="#especies" class="enlace-tarjeta">Know Species →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="seccion-pie">
+                    <h4>Star Wars Universe</h4>
+                    <p>Your ultimate guide to the galaxy far, far away.</p>
+                </div>
+                <div class="seccion-pie">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/personajes">Characters</a></li>
+                        <li><a href="/peliculas">Movies</a></li>
+                        <li><a href="/naves">Starphips</a></li>
+                    </ul>
+                </div>
+                <div class="seccion-pie">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="/planetas">Planets</a></li>
+                        <li><a href="/especies">Species</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fondo-pie">
+                <p>&copy; 2025 Star Wars Universe. May the Force be with you..</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
