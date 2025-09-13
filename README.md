@@ -2,7 +2,13 @@
 
 A Flask-based web application that allows users to explore Star Wars data including characters, movies, planets, starships, and species. The application serves as a frontend to the [SWAPI (Star Wars API)](https://www.swapi.tech/).
 
-![Star Wars API Explorer](static/images/star-wars-banner.jpg)
+## Screenshots
+
+![Screenshot 1](docs/U1.png)
+*Main page of the Star Wars API Explorer*
+
+![Screenshot 2](docs/U3.png)
+*Character details view*
 
 ## Features
 
