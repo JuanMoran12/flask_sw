@@ -123,8 +123,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Flask](https://flask.palletsprojects.com/)
 - [Star Wars](https://www.starwars.com/) for the amazing universe
 
-## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
-
-Project Link: [https://github.com/yourusername/star-wars-api-explorer](https://github.com/yourusername/star-wars-api-explorer)
